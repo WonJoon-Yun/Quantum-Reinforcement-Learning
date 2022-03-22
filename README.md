@@ -1,9 +1,9 @@
-# Quantum--Reinforcement-Learning (QRL)
+# Quantum-Reinforcement-Learning (QRL)
 
 ## Installation
 
 Install [pytorch](https://pytorch.org/) & [torchquantum](https://github.com/mit-han-lab/torchquantum) to operate QMARL.
-
+Support Batch Learning with CUDA! 
 ```bash
 git clone https://github.com/mit-han-lab/torchquantum.git
 cd torchquantum
