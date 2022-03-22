@@ -10,7 +10,7 @@ import gym
 import torchquantum.functional as tqf
 from torch.optim.lr_scheduler import CosineAnnealingLR
 from  torch.distributions import Categorical
-from network import QActor, QCritic,ReplayBuffer
+from network import QActor, ReplayBuffer
 from torch.utils.tensorboard import SummaryWriter
 from datetime import datetime
 
@@ -19,7 +19,7 @@ a_dim = 2
 gamma = 0.99
 n_epochs = 1000
 wires_per_block = 2 
-a_lr = 1e-3
+a_lr = 1e-4
 static = 'store_true'
 
 def _train(epoch, Experience, Pi, PiTarget, optimizer):
@@ -54,7 +54,7 @@ def train():
 
     if static:
         actor.q_layer.static_on(wires_per_block=wires_per_block)
-    epsilon = 0.3
+    epsilon = 0.5
     for epoch in range(1, n_epochs + 1):
         
         s = env.reset()
@@ -88,6 +88,3 @@ def train():
         Scheduler.step()
         torch.save(actor.state_dict(),'./Qagent.pkl')
             
-                
-if __name__ == "__main__":
-    train()
