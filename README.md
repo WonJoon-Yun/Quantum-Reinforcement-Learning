@@ -26,7 +26,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Citations
 If this QRL framework helps your academic/industrial research, 
-please cite this article [Paper](https://arxiv.org/abs/2203.10443).
+please cite this article [Paper](https://arxiv.org/abs/2108.06849).
 And if you want to find the extension version (QMARL), please visit [Here](https://github.com/WonJoon-Yun/Quantum-Multi-Agent-Reinforcement-Learning)!
 
 ```bibtex
